@@ -9,6 +9,14 @@ class Test_planets(unittest.TestCase):
         weight = 136
         self.assertAlmostEqual(weight_on_planets(weight,"Mars"),51.68)
 
+    def test_jupiter(self) -> None:
+        weight = 150
+        self.assertAlmostEqual(weight_on_planets(weight, "Jupiter"), 351.0)
+
+    def test_venus(self) -> None:
+        weight = 100
+        self.assertAlmostEqual(weight_on_planets(weight, "Venus"), 91.0)
+
     def test_error(self) -> None:
         with self.assertRaises(ValueError):  # uses context manager for checking exception
             weight = 99
